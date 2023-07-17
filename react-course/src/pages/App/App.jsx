@@ -4,7 +4,8 @@ import MyAccount from '../MyAccount'
 import MyOrder from '../MyOrder'
 import MyOrders from '../MyOrders'
 import NotFound from '../NotFound'
-import SigIn from '../SigIn'
+import SignIn from '../SignIn'
+import NavBar from '../../components/NavBar'
 import './App.css'
 
 const AppRoutes = () => {
@@ -15,7 +16,7 @@ const AppRoutes = () => {
     {path: '/my-order', element: <MyOrder></MyOrder>},
     {path: '/my-orders', element: <MyOrders></MyOrders>},
     {path: '/*', element: <NotFound></NotFound>}, //cualquier otra ruta para not found
-    {path: '/sig-in', element: <SigIn></SigIn>}
+    {path: '/sign-in', element: <SignIn></SignIn>}
     
   ])
 
@@ -27,6 +28,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <AppRoutes></AppRoutes>
+      <NavBar></NavBar>
     </BrowserRouter>
   )
 }
